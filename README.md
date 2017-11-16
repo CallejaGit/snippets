@@ -1,6 +1,10 @@
 # snippets
 
-This is my personal snippets, specifically used by snipmate. Generates text by a `text` followed the tab key. 
+This is my personal snippets, works with snipmate.
+
+**Note:** I used jumptags that are setup by cvim and therefore has to have cvim. 
+Need to configure jumptags without cvim, and prompt input user for function names
+
 
 ### Adding snippets 
 
