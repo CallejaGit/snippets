@@ -1,3 +1,14 @@
-snippet vfunc
-	void <+FUNCTION_NAME+> (<+argument_list+>)
+snippet \if
+	void ${1:<FUNCTION_NAME>} (${2:<ARGUMENT_LIST>}) {
+		${3:<FUNCTION_BODY>}
+	}
 	
+snippet \sf
+	for ( ${1:<INIT>}; ${2:<CONDITION>}; ${3:<INCREMENT>} ) {
+   		${4:<STATEMENT_BODY>}
+	}
+
+snippet \im
+	static void main ( ${1: <ARGUMENT_LIST>} ) {
+		return ${2:<RETURN_VALUE>};
+	}
