@@ -1,14 +1,36 @@
+snippet \im
+	static void main ( ${1: <ARGUMENT_LIST>} ) {
+		${3:<STATEMENT_BODY>}
+		return ${2:<RETURN_VALUE>};
+	}
+
+
 snippet \if
 	void ${1:<FUNCTION_NAME>} (${2:<ARGUMENT_LIST>}) {
 		${3:<FUNCTION_BODY>}
 	}
-	
+
+
 snippet \sf
-	for ( ${1:<INIT>}; ${2:<CONDITION>}; ${3:<INCREMENT>} ) {
-   		${4:<STATEMENT_BODY>}
+	for ( ${1:<INIT>}; ${2:<CONDITION>}; ${3:<INCREMENT>}) {
+		${4:<STATEMENT_BODY}
 	}
 
-snippet \im
-	static void main ( ${1: <ARGUMENT_LIST>} ) {
-		return ${2:<RETURN_VALUE>};
+
+snippet \imf
+	int main(int argc, char **argv) {
+		return 0;
 	}
+
+snippet \ri
+	ros::init(argc, argv, "${1:<NODE_NAME>}");
+
+snippet \rn
+	ros::NodeHandle n;
+
+snippet \rp
+	ros::ros::Publisher ${1:VAR_PUB} = n.advertise<std_msgs::String>("${2:TOPIC_NAME}", 1000);
+
+
+snippet \rpm
+	ros::${1:VAR_PUB}.publish(${2:MESSAGE_OBJ});
