@@ -1,27 +1,47 @@
+snippet \id
+	#include <${1: <ARGUMENT_LIST>}>
+	${2: }
+
 snippet \im
 	static void main ( ${1: <ARGUMENT_LIST>} ) {
-		${3:<STATEMENT_BODY>}
-		return ${2:<RETURN_VALUE>};
+	    ${3:<STATEMENT_BODY>}
+	    return ${2:<RETURN_VALUE>};
 	}
 
 
 snippet \if
 	void ${1:<FUNCTION_NAME>} (${2:<ARGUMENT_LIST>}) {
-		${3:<FUNCTION_BODY>}
+	    ${3:<FUNCTION_BODY>}
 	}
 
 
 snippet \sf
 	for ( ${1:<INIT>}; ${2:<CONDITION>}; ${3:<INCREMENT>}) {
-		${4:<STATEMENT_BODY}
+	    ${4:<STATEMENT_BODY}
 	}
 
 
 snippet \imf
 	int main(int argc, char **argv) {
-		return 0;
+	    return 0;
 	}
 
+snippet \f
+	if (${1: <ARGUMENT_LIST>}) {
+	    ${2: <BODY>}
+	}
+
+snippet \fe
+	if (${1: <ARGUMENT_LIST>}) {
+	    ${2: <BODY>}
+	}
+	else {
+	    ${3: <BODY>}
+	} 
+snippet \iw
+	while (${1: <CONDITION>}) {
+	    ${2: <STATEMENT>}	
+	}
 snippet \ri
 	ros::init(argc, argv, "${1:<NODE_NAME>}");
 
@@ -34,3 +54,4 @@ snippet \rp
 
 snippet \rpm
 	ros::${1:VAR_PUB}.publish(${2:MESSAGE_OBJ});
+
